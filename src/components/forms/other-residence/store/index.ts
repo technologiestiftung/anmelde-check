@@ -4,82 +4,82 @@ import { getLocalStorage, setLocalStorage } from "./local-storage.ts";
 import { useOverviewStore } from "../../overview/store";
 
 export const useOtherResidenceStore = create<SecondaryResidenceStore>(
-  (set, get) => ({
-    requiredDocs: getLocalStorage().requiredDocs,
+	(set, get) => ({
+		requiredDocs: getLocalStorage().requiredDocs,
 
-    hasOtherResidence: getLocalStorage().hasOtherResidence,
-    setHasOtherResidence(hasOtherResidence) {
-      const requiredDocs = {
-        supplement: false,
-      };
+		hasOtherResidence: getLocalStorage().hasOtherResidence,
+		setHasOtherResidence(hasOtherResidence) {
+			const requiredDocs = {
+				supplement: false,
+			};
 
-      set({
-        hasOtherResidence,
-        isOtherResidenceAbroad: null,
-        isRegisteringForMoreThanThreeMonths: null,
-        isRegisteringForMoreThanSixMonths: null,
-        requiredDocs,
-      });
+			set({
+				hasOtherResidence,
+				isOtherResidenceAbroad: null,
+				isRegisteringForMoreThanThreeMonths: null,
+				isRegisteringForMoreThanSixMonths: null,
+				requiredDocs,
+			});
 
-      setLocalStorage(get());
-      useOverviewStore.getState().setRequiredDocs(requiredDocs);
-    },
+			setLocalStorage(get());
+			useOverviewStore.getState().setRequiredDocs(requiredDocs);
+		},
 
-    isOtherResidenceAbroad: getLocalStorage().isOtherResidenceAbroad,
-    setIsOtherResidenceAbroad(isOtherResidenceAbroad) {
-      const requiredDocs = {
-        supplement: false,
-      };
+		isOtherResidenceAbroad: getLocalStorage().isOtherResidenceAbroad,
+		setIsOtherResidenceAbroad(isOtherResidenceAbroad) {
+			const requiredDocs = {
+				supplement: false,
+			};
 
-      set({
-        isOtherResidenceAbroad,
-        isRegisteringForMoreThanThreeMonths: null,
-        isRegisteringForMoreThanSixMonths: null,
-        requiredDocs,
-      });
+			set({
+				isOtherResidenceAbroad,
+				isRegisteringForMoreThanThreeMonths: null,
+				isRegisteringForMoreThanSixMonths: null,
+				requiredDocs,
+			});
 
-      setLocalStorage(get());
-      useOverviewStore.getState().setRequiredDocs(requiredDocs);
-    },
+			setLocalStorage(get());
+			useOverviewStore.getState().setRequiredDocs(requiredDocs);
+		},
 
-    isRegisteringForMoreThanThreeMonths:
-      getLocalStorage().isRegisteringForMoreThanThreeMonths,
-    setIsRegisteringForMoreThanThreeMonths(
-      isRegisteringForMoreThanThreeMonths,
-    ) {
-      const requiredDocs = {
-        supplement:
-          get().isOtherResidenceAbroad === true &&
-          isRegisteringForMoreThanThreeMonths === true,
-      };
+		isRegisteringForMoreThanThreeMonths:
+			getLocalStorage().isRegisteringForMoreThanThreeMonths,
+		setIsRegisteringForMoreThanThreeMonths(
+			isRegisteringForMoreThanThreeMonths,
+		) {
+			const requiredDocs = {
+				supplement:
+					get().isOtherResidenceAbroad === true &&
+					isRegisteringForMoreThanThreeMonths === true,
+			};
 
-      set({
-        isRegisteringForMoreThanThreeMonths,
-        requiredDocs,
-      });
+			set({
+				isRegisteringForMoreThanThreeMonths,
+				requiredDocs,
+			});
 
-      setLocalStorage(get());
-      useOverviewStore.getState().setRequiredDocs(requiredDocs);
-    },
+			setLocalStorage(get());
+			useOverviewStore.getState().setRequiredDocs(requiredDocs);
+		},
 
-    isRegisteringForMoreThanSixMonths:
-      getLocalStorage().isRegisteringForMoreThanSixMonths,
-    setIsRegisteringForMoreThanSixMonths: (
-      isRegisteringForMoreThanSixMonths,
-    ) => {
-      const requiredDocs = {
-        supplement:
-          get().isOtherResidenceAbroad === false &&
-          isRegisteringForMoreThanSixMonths === true,
-      };
+		isRegisteringForMoreThanSixMonths:
+			getLocalStorage().isRegisteringForMoreThanSixMonths,
+		setIsRegisteringForMoreThanSixMonths: (
+			isRegisteringForMoreThanSixMonths,
+		) => {
+			const requiredDocs = {
+				supplement:
+					get().isOtherResidenceAbroad === false &&
+					isRegisteringForMoreThanSixMonths === true,
+			};
 
-      set({
-        isRegisteringForMoreThanSixMonths,
-        requiredDocs,
-      });
+			set({
+				isRegisteringForMoreThanSixMonths,
+				requiredDocs,
+			});
 
-      setLocalStorage(get());
-      useOverviewStore.getState().setRequiredDocs(requiredDocs);
-    },
-  }),
+			setLocalStorage(get());
+			useOverviewStore.getState().setRequiredDocs(requiredDocs);
+		},
+	}),
 );

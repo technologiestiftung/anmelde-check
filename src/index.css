@@ -3,53 +3,53 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Berlin";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/BerlinTypeWeb-Regular.woff2");
+	font-family: "Berlin";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/BerlinTypeWeb-Regular.woff2");
 }
 
 @font-face {
-  font-family: "Berlin";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/BerlinTypeWeb-Bold.woff2");
+	font-family: "Berlin";
+	font-style: normal;
+	font-weight: 700;
+	src: url("/fonts/BerlinTypeWeb-Bold.woff2");
 }
 
 /* Required for consistent progress bar rendering across chrome, firefox and safari */
 progress[value] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 progress[value] {
-  --color: #4f90cd;
-  --background: #e6e6e6;
-  border: none; /* Firefox add a default border */
-  background: var(--background);
+	--color: #4f90cd;
+	--background: #e6e6e6;
+	border: none; /* Firefox add a default border */
+	background: var(--background);
 }
 
 progress[value]::-moz-progress-bar {
-  background: var(--color);
+	background: var(--color);
 }
 
 progress[value]::-webkit-progress-bar {
-  background: var(--background);
+	background: var(--background);
 }
 
 progress[value]::-webkit-progress-value {
-  background: var(--color);
+	background: var(--color);
 }
 
 /* Hide the confetti in print view */
 @media print {
-  canvas {
-    display: none;
-  }
+	canvas {
+		display: none;
+	}
 }
 
 /* Workaround for safari bug: "text-align: center" is not applied in select */
 select {
-  text-align-last: center;
+	text-align-last: center;
 }

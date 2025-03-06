@@ -3,18 +3,18 @@ import { trackInteraction } from "../../../feedback/matomo.ts";
 import { useI18nStore } from "../../../../i18n/store";
 
 export function useSaveIntroPageViewInSessionStorage() {
-  const { language } = useI18nStore();
+	const { language } = useI18nStore();
 
-  useEffect(() => {
-    saveIntroPageViewInSessionStorage();
+	useEffect(() => {
+		saveIntroPageViewInSessionStorage();
 
-    trackInteraction({
-      eventAction: "page-view",
-      eventName: `intro-page-view (language: ${language})`,
-    });
-  }, []);
+		trackInteraction({
+			eventAction: "page-view",
+			eventName: `intro-page-view (language: ${language})`,
+		});
+	}, []);
 }
 
 function saveIntroPageViewInSessionStorage() {
-  sessionStorage.setItem("has-seen-intro-page-view", "true");
+	sessionStorage.setItem("has-seen-intro-page-view", "true");
 }
