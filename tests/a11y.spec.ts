@@ -1,4 +1,5 @@
-import { expect, firefox, Page, test } from "@playwright/test";
+import { expect, firefox, test } from "@playwright/test";
+import type { Page } from "@playwright/test";
 
 function getTab(browserName: string) {
   if (browserName === "webkit") {
@@ -114,9 +115,9 @@ test("App should be usable with keyboard", async ({ page, browserName }) => {
   const registrationForm = customPage
     .locator("div")
     .filter({ hasText: /^Anmeldeformular$/ });
-  const movingInConfirmation = customPage.locator("div").filter({
-    hasText: /^Einzugsbestätigung des Wohnungsgebers\/Vermieters$/,
-  });
+  const movingInConfirmation = customPage
+    .locator("div")
+    .filter({ hasText: /^Einzugsbestätigung des Wohnungsgebers\/Vermieters$/ });
   const confirmationOfCustodian = customPage
     .locator("div")
     .filter({ hasText: /^Einverständniserklärung Deiner Sorgeberechtigten$/ });

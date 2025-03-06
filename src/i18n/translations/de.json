@@ -28,7 +28,7 @@
   "button.back": "Zurück",
   "button.next": "Weiter",
   "button.next.tooltip": "Bitte beantworte die Frage zuerst.",
-  "intro.p1": "Diese Anwendung soll Dir dabei helfen, Dich gut auf Deinen Termin zur Anmeldung vorzubereiten. Beantworte uns ein paar Fragen und wir erstellen Dir eine Übersicht mit Dokumenten, die Du für den Termin mitbringen musst. Los geht's!",
+  "intro.p1": "Diese Anwendung soll Dir dabei helfen, Dich gut auf Deinen Termin zur An- oder Ummeldung einer Wohnung vorzubereiten. Beantworte uns ein paar Fragen und wir erstellen Dir eine Übersicht mit Dokumenten, die Du für den Termin mitbringen musst. Los geht's!",
   "intro.p2": "Du hast noch keinen Termin?",
   "intro.p2.link": "Termin buchen.",
   "feedback.intro": "Diese Anwendung ist ein Prototyp vom CityLAB Berlin und wird aktuell für einen Test verwendet.",

@@ -40,10 +40,11 @@ export const useI18nStore = create<i18nStore>((set, get) => ({
     translations: Record<string, string>,
   ) {
     set((state) => ({
-      translations: {
-        ...state.translations,
-        [language]: translations,
-      },
+      translations: { ...state.translations, [language]: translations },
     }));
+
+    if (translations.dir) {
+      document.documentElement.dir = translations.dir;
+    }
   },
 }));

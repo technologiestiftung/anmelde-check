@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="flex w-full">
-      <div className="sticky left-0 top-0 hidden h-screen w-2/5 bg-blue-950 md:flex print:hidden">
+      <div className="sticky left-0 top-0 hidden h-screen w-2/5 bg-blue-950 md:flex xl:max-w-[550px] print:hidden">
         <VerticalSidebarImage />
       </div>
 
@@ -23,12 +23,12 @@ function App() {
             <Progress id={"mobile-progress-bar"} />
           </div>
 
-          <header className="flex w-full items-center justify-between px-5 py-5 print:hidden">
+          <header className="flex w-full items-center justify-between p-6 print:hidden">
             <HomeButton />
             <LanguageSelect />
           </header>
 
-          <main className="flex h-full justify-center px-5 pb-11 print:items-start">
+          <main className="flex h-full justify-center px-6 pb-10 pt-2 print:items-start">
             <div className="flex flex-col items-start">
               <HeaderTitle />
               <Steps />

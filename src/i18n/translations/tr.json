@@ -28,7 +28,7 @@
   "button.back": "Geri",
   "button.next": "İleri",
   "button.next.tooltip": "Lütfen önce soruyu yanıtlayın.",
-  "intro.p1": "Bu uygulama, kayıt randevunuz için iyi bir şekilde hazırlanmanıza yardımcı olmak amacıyla tasarlanmıştır. Birkaç soruyu yanıtlayın ve size randevu için getirmeniz gereken belgelerle ilgili bir özet hazırlayalım. Hadi başlayalım!",
+  "intro.p1": "Bu uygulama, dairenizi kaydettirmek veya yeniden kaydettirmek için randevunuza hazırlanmanıza yardımcı olmak üzere tasarlanmıştır. Birkaç soruyu yanıtlayın ve size randevu için getirmeniz gereken belgelerle ilgili bir özet hazırlayalım. Hadi başlayalım!",
   "intro.p2": "Henüz bir randevunuz yok mu?",
   "intro.p2.link": "Randevu al.",
   "feedback.intro": "Bu uygulama, CityLAB Berlin tarafından bir prototip olarak geliştirilmiş ve şu anda bir test için kullanılmaktadır.",
