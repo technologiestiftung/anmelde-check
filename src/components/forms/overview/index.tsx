@@ -29,7 +29,7 @@ export function Overview() {
 				{t("overview.title")}
 			</h2>
 
-			<p dangerouslySetInnerHTML={{ __html: t("overview.text") }}></p>
+			<p dangerouslySetInnerHTML={{ __html: t("overview.text") }} />
 
 			<ul className="flex flex-col gap-2">
 				{documents.map(([key, value]) => (

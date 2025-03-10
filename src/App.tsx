@@ -47,7 +47,7 @@ function App() {
 								? "flex"
 								: "hidden md:flex"
 						} `}
-					></div>
+					/>
 
 					<Footer />
 				</div>
