@@ -13,10 +13,10 @@
 		"test:e2e": "playwright test"
 	},
 	"dependencies": {
-		"react": "19.0.0",
-		"react-dom": "19.0.0",
-		"zod": "3.24.2",
-		"zustand": "5.0.3"
+		"react": "19.2.8",
+		"react-dom": "19.2.8",
+		"zod": "3.25.76",
+		"zustand": "5.0.15"
 	},
 	"devDependencies": {
 		"@eslint/js": "9.11.1",
